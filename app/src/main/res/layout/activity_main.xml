@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tan_background"
+    android:orientation="vertical"
+    tools:context="com.example.android.musicplayerapp.MainActivity">
+
+    <TextView
+        android:id="@+id/edm_view"
+        style="@style/CategoryStyle"
+        android:background="@color/category_first"
+        android:text="@string/edm"
+
+        />
+
+    <TextView
+        android:id="@+id/top40_view"
+        style="@style/CategoryStyle"
+        android:background="@color/category_second"
+        android:text="@string/top_40"
+
+        />
+
+    <TextView
+        android:id="@+id/jpop_view"
+        style="@style/CategoryStyle"
+        android:background="@color/category_third"
+        android:text="@string/jpop"
+
+        />
+
+    <TextView
+        android:id="@+id/turkish_pop_view"
+        style="@style/CategoryStyle"
+        android:background="@color/category_fourth"
+        android:text="@string/turkish_pop"
+
+        />
+
+
+
+
+
+</LinearLayout>

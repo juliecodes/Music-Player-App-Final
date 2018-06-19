@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Music Player App</string>
+    <string name="edm">EDM/Trance</string>
+    <string name="jpop">Japanese Pop</string>
+    <string name="turkish_pop">Turkish Pop</string>
+    <string name="top_40">Top 40</string>
+</resources>
