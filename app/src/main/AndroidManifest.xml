@@ -17,30 +17,31 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".EdmActivity"
+        <activity
+            android:name=".EdmActivity"
             android:label="@string/edm"
-            android:parentActivityName=".MainActivity"
-            />
-        <activity android:name=".Top40Activity"
-            android:label="@string/top_40"
-            android:parentActivityName=".MainActivity"
-            />
-        <activity android:name=".JpopActivity"
-            android:label="@string/jpop"
-            android:parentActivityName=".MainActivity"
-            />
-        <activity android:name=".TurkishPopActivity"
-            android:label="@string/turkish_pop"
-            android:parentActivityName=".MainActivity"
-            ></activity>
+            android:parentActivityName=".MainActivity" />
 
-        <activity android:name=".SongDetailsPage"
-            android:label="Song Details"
-            ></activity>
+        <activity
+            android:name=".Top40Activity"
+            android:label="@string/top_40"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".JpopActivity"
+            android:label="@string/jpop"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".TurkishPopActivity"
+            android:label="@string/turkish_pop"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".SongDetailsPage"
+            android:label="Song Details" />
 
     </application>
-
-
 
 
 </manifest>

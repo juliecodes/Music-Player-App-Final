@@ -9,10 +9,10 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 
- /**
-    * CREDITS:
-    * Play Button modified from https://www.vecteezy.com/vector-art/93959-flat-media-player-buttons
-    **/
+/**
+ * CREDITS:
+ * Play Button modified from https://www.vecteezy.com/vector-art/93959-flat-media-player-buttons
+ **/
 
 public class MainActivity extends AppCompatActivity {
 
@@ -64,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
         // Find the View that shows the turkish pop music category
         TextView turkishMusic = (TextView) findViewById(R.id.turkish_pop_view);
 
@@ -79,10 +78,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
     }
-
-
 
 
 }

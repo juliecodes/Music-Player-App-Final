@@ -19,7 +19,6 @@ import java.util.ArrayList;
  */
 
 
-
 public class SongAdapter extends ArrayAdapter<Song> {
 
     // private static final Word LOG_TAG = WordAdapter.class.getSimpleName();
@@ -29,7 +28,7 @@ public class SongAdapter extends ArrayAdapter<Song> {
      * The context is used to inflate the layout file, and the list is the data we want
      * to populate into the lists.
      *
-     * @param context        The current context. Used to inflate the layout file.
+     * @param context  The current context. Used to inflate the layout file.
      * @param songList A List of songs to display in a list
      */
     public SongAdapter(Activity context, ArrayList<Song> songList) {
@@ -38,26 +37,23 @@ public class SongAdapter extends ArrayAdapter<Song> {
         // Because this is a custom adapter for two TextViews and an ImageView, the adapter is not
         // going to use this second argument, so it can be any value. Here, we used 0.
         super(context, 0, songList);
-
-
     }
-
 
 
     /**
      * Provides a view for an AdapterView (ListView, GridView, etc.)
      *
-     * @param position The position in the list of data that should be displayed in the
-     *                 list item view.
+     * @param position    The position in the list of data that should be displayed in the
+     *                    list item view.
      * @param convertView The recycled view to populate.
-     * @param parent The parent ViewGroup that is used for inflation.
+     * @param parent      The parent ViewGroup that is used for inflation.
      * @return The View for the position in the AdapterView.
      */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         // Check if the existing view is being reused, otherwise inflate the view
         View listItemView = convertView;
-        if(listItemView == null) {
+        if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.song_item, parent, false);
         }
@@ -65,32 +61,27 @@ public class SongAdapter extends ArrayAdapter<Song> {
         // Get the {@link AndroidFlavor} object located at this position in the list
         final Song currentSong = getItem(position);
 
-        // Find the TextView in the list_item.xml layout with the ID version_name
+        // Find the TextView in the song_item.xml layout with the ID version_name
         TextView songTitleTextView = (TextView) listItemView.findViewById(R.id.song_title_view);
         // Get the version name from the current Song object and
         // set this text on the name TextView
         songTitleTextView.setText(currentSong.getSongTitle());
 
 
-        // Find the TextView in the list_item.xml layout with the ID version_number
+        // Find the TextView in the song_item.xml layout with the ID version_number
         TextView songArtistTextView = (TextView) listItemView.findViewById(R.id.song_artist_view);
         // Get the version number from the current Song object and
         // set this text on the number TextView
         songArtistTextView.setText(currentSong.getSongArtist());
 
-        // Find the ImageView in the list_item.xml layout with the ID list_item_icon
+        // Find the ImageView in the song_item.xml layout with the ID song_image_icon
         ImageView songImageView = (ImageView) listItemView.findViewById(R.id.song_image_icon);
-        // Get the image resource ID from the current Song object and
-        // set the image to iconView
+        // Get the image resource ID from the drawable folder and
+        // set the image to songImageView
         songImageView.setImageResource(R.drawable.playbutton_single);
 
-
-
-        // Link the song section to the details page
-        LinearLayout songViewWrap = (LinearLayout) listItemView.findViewById(R.id.song_view_wrap);
-
-        // Set a click listener on that song section
-        songViewWrap.setOnClickListener(new View.OnClickListener() {
+        // Set a click listener on that image
+        songImageView.setOnClickListener(new View.OnClickListener() {
             // The code in this method will be executed when the playButton is clicked on.
             @Override
             public void onClick(View view) {
@@ -104,10 +95,8 @@ public class SongAdapter extends ArrayAdapter<Song> {
                 playIntent.putExtra("mySongArtist", currentSong.getSongArtist());
 
                 onClickContext.startActivity(playIntent);
-
             }
         });
-
 
 // Return the whole list item layout (containing 2 TextViews and an ImageView)
         // so that it can be shown in the ListView
@@ -115,11 +104,6 @@ public class SongAdapter extends ArrayAdapter<Song> {
 
 
     }
-
-
-
-
-
 
 
 }
