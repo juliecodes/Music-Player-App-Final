@@ -8,14 +8,18 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
+
+ /**
+    * CREDITS:
+    * Play Button modified from https://www.vecteezy.com/vector-art/93959-flat-media-player-buttons
+    **/
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
 
 
         // Find the View that shows the edm trance category
@@ -32,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        // Find the View that shows the edm trance category
+        // Find the View that shows the top 40 music category
         TextView top40Music = (TextView) findViewById(R.id.top40_view);
 
         // Set a click listener on that View
@@ -46,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        // Find the View that shows the edm trance category
+        // Find the View that shows the japanese pop music category
         TextView jpopMusic = (TextView) findViewById(R.id.jpop_view);
 
         // Set a click listener on that View
@@ -61,8 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-        // Find the View that shows the edm trance category
+        // Find the View that shows the turkish pop music category
         TextView turkishMusic = (TextView) findViewById(R.id.turkish_pop_view);
 
         // Set a click listener on that View
@@ -77,18 +80,9 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
-
-
-
-
     }
 
 
-   /* public void SongDetailsPageView (View view) {
-        Intent intentName = new Intent (this, SongDetailsPage.class);
-        startActivity(intentName);
-    } */
+
 
 }

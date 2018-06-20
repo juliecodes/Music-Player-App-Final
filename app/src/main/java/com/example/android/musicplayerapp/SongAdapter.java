@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -66,31 +67,29 @@ public class SongAdapter extends ArrayAdapter<Song> {
 
         // Find the TextView in the list_item.xml layout with the ID version_name
         TextView songTitleTextView = (TextView) listItemView.findViewById(R.id.song_title_view);
-        // Get the version name from the current AndroidFlavor object and
+        // Get the version name from the current Song object and
         // set this text on the name TextView
         songTitleTextView.setText(currentSong.getSongTitle());
 
 
         // Find the TextView in the list_item.xml layout with the ID version_number
         TextView songArtistTextView = (TextView) listItemView.findViewById(R.id.song_artist_view);
-        // Get the version number from the current AndroidFlavor object and
+        // Get the version number from the current Song object and
         // set this text on the number TextView
         songArtistTextView.setText(currentSong.getSongArtist());
 
         // Find the ImageView in the list_item.xml layout with the ID list_item_icon
-        //ImageView iconView = (ImageView) listItemView.findViewById(R.id.list_item_icon);
-        // Get the image resource ID from the current AndroidFlavor object and
+        ImageView songImageView = (ImageView) listItemView.findViewById(R.id.song_image_icon);
+        // Get the image resource ID from the current Song object and
         // set the image to iconView
-        //iconView.setImageResource(currentAndroidFlavor.getImageResourceId());
+        songImageView.setImageResource(R.drawable.playbutton_single);
 
 
 
-
-
-        // Find the Button that will play the song
+        // Link the song section to the details page
         LinearLayout songViewWrap = (LinearLayout) listItemView.findViewById(R.id.song_view_wrap);
 
-        // Set a click listener on that Button
+        // Set a click listener on that song section
         songViewWrap.setOnClickListener(new View.OnClickListener() {
             // The code in this method will be executed when the playButton is clicked on.
             @Override
@@ -103,7 +102,6 @@ public class SongAdapter extends ArrayAdapter<Song> {
 
                 playIntent.putExtra("mySongTitle", currentSong.getSongTitle());
                 playIntent.putExtra("mySongArtist", currentSong.getSongArtist());
-                // playIntent.putExtra("AlbumName", currentSong.getAlbumName());
 
                 onClickContext.startActivity(playIntent);
 

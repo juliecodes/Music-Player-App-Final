@@ -11,8 +11,6 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 
-
-
 public class Top40Activity extends AppCompatActivity {
 
     @Override
@@ -20,23 +18,21 @@ public class Top40Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.song_list);
 
-
-
         ArrayList<Song> songs = new ArrayList<Song>();
-        songs.add(new Song("Rockabye", "Clean Bandit featuring Sean Paul and Anne-Marie"));
-        songs.add(new Song("Heavy", "Linkin Park featuring Kiiara"));
+
         songs.add(new Song("Attention", "Charlie Puth"));
-        songs.add(new Song("We Don't Talk Anymore", "Charlie Puth featuring Selena Gomez"));
+        songs.add(new Song("Clarity", "Zedd featuring Foxes"));
         songs.add(new Song("Havana", "Camila Cabello"));
-
-        songs.add(new Song("Rockabye", "Clean Bandit featuring Sean Paul and Anne-Marie"));
         songs.add(new Song("Heavy", "Linkin Park featuring Kiiara"));
-        songs.add(new Song("Attention", "Charlie Puth"));
+        songs.add(new Song("Lean On", "Major Lazer & DJ Snake featuring MØ"));
+        songs.add(new Song("Love Wants What it Wants", "Selena Gomez"));
+        songs.add(new Song("Rockabye", "Clean Bandit featuring Sean Paul and Anne-Marie"));
+        songs.add(new Song("Stay the Night", "Zedd featuring Hayley Williams"));
         songs.add(new Song("We Don't Talk Anymore", "Charlie Puth featuring Selena Gomez"));
-        songs.add(new Song("Havana", "Camila Cabello"));
+        songs.add(new Song("What I've Done", "Linkin Park"));
 
 
-        // Create an {@link WordAdapter}, whose data source is a list of {@link Word}s. The
+        // Create an {@link SongAdapter}, whose data source is a list of {@link Song}s. The
         // adapter knows how to create list items for each item in the list.
         com.example.android.musicplayerapp.SongAdapter adapter = new com.example.android.musicplayerapp.SongAdapter(this, songs);
 
@@ -45,8 +41,8 @@ public class Top40Activity extends AppCompatActivity {
         // word_list.xml file.
         ListView listView = (ListView) findViewById(R.id.list);
 
-        // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
-        // {@link ListView} will display list items for each {@link Word} in the list.
+        // Make the {@link ListView} use the {@link SongAdapter} we created above, so that the
+        // {@link ListView} will display list items for each {@link Song} in the list.
         listView.setAdapter(adapter);
 
 

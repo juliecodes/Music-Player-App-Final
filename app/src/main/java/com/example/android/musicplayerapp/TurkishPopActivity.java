@@ -11,8 +11,6 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 
-
-
 public class TurkishPopActivity extends AppCompatActivity {
 
     @Override
@@ -20,24 +18,21 @@ public class TurkishPopActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.song_list);
 
-
-
         ArrayList<Song> songs = new ArrayList<Song>();
 
-        songs.add(new Song("Hoşuna mı Gidiyor", "Ece Seçkin"));
-        songs.add(new Song("Seviyorsun", "Hande Yener"));
-        songs.add(new Song("Zorun Ne Sevgilim", "İrem Derici"));
-        songs.add(new Song("Kalbimin Tek Sahibine", "İrem Derici"));
         songs.add(new Song("Cevapsız Çınlama", "Emrah Karaduman featuring Aleyna Tilki"));
-
         songs.add(new Song("Hoşuna mı Gidiyor", "Ece Seçkin"));
-        songs.add(new Song("Seviyorsun", "Hande Yener"));
-        songs.add(new Song("Zorun Ne Sevgilim", "İrem Derici"));
         songs.add(new Song("Kalbimin Tek Sahibine", "İrem Derici"));
-        songs.add(new Song("Cevapsız Çınlama", "Emrah Karaduman featuring Aleyna Tilki"));
+        songs.add(new Song("Nolur Gitme", "Aynur Aydın"));
+        songs.add(new Song("İltimas", "Gülşen featuring Murat Boz"));
+        songs.add(new Song("Prens ve Prenses", "Simge"));
+        songs.add(new Song("Seviyorsun", "Hande Yener"));
+        songs.add(new Song("Yan Benimle", "Sıla"));
+        songs.add(new Song("Yolla", "Tarkan"));
+        songs.add(new Song("Zorun Ne Sevgilim", "İrem Derici"));
 
 
-        // Create an {@link WordAdapter}, whose data source is a list of {@link Word}s. The
+        // Create an {@link SongAdapter}, whose data source is a list of {@link Song}s. The
         // adapter knows how to create list items for each item in the list.
         com.example.android.musicplayerapp.SongAdapter adapter = new com.example.android.musicplayerapp.SongAdapter(this, songs);
 
@@ -46,8 +41,8 @@ public class TurkishPopActivity extends AppCompatActivity {
         // word_list.xml file.
         ListView listView = (ListView) findViewById(R.id.list);
 
-        // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
-        // {@link ListView} will display list items for each {@link Word} in the list.
+        // Make the {@link ListView} use the {@link SongAdapter} we created above, so that the
+        // {@link ListView} will display list items for each {@link Song} in the list.
         listView.setAdapter(adapter);
 
 
